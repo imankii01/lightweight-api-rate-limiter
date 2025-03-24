@@ -1,6 +1,6 @@
 {
     "name": "lightweight-api-rate-limiter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A robust, framework-agnostic rate limiter for Node.js applications, built for scalability and ease of use",
     "main": "src/index.js",
     "types": "types/index.d.ts",
