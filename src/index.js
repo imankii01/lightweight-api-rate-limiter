@@ -46,10 +46,13 @@ const rateLimiter = (options = {}) => {
     const key = keyGenerator(req);
     const now = Date.now();
 
-    if (whitelist.includes(key)) return next();
-    if (blacklist.includes(key)) {
-      await log(`Blocked blacklisted key: ${key}`);
-      return onLimit ? onLimit(req, res, next) : sendError(res, 403, 'Forbidden');
+    const clientIp = key.replace(/^::ffff:/, '');
+    if (whitelist.includes(clientIp)) {
+      return next();
+    }
+    if (blacklist.includes(clientIp)) {
+      await log(`Blocked blacklisted key: ${clientIp}`);
+      return sendError(res, 403, 'Forbidden');
     }
 
     const effectiveMax = dynamicLimit ? dynamicLimit(req) : max;
@@ -66,9 +69,14 @@ const rateLimiter = (options = {}) => {
         if (addHeaders) setHeaders(res, tokensPerInterval, tokens - 1, resetTime);
       } else {
         const { count, resetTime } = await effectiveStore.increment(key, effectiveMax, windowMs);
-        const burstData = burstMax > 0 ? await effectiveStore.increment(`${key}:burst`, burstMax, burstWindowMs) : null;
-        const totalMax = effectiveMax + (burstData ? burstMax : 0);
-        const totalCount = count + (burstData ? burstData.count : 0);
+        let totalMax = effectiveMax;
+        let totalCount = count;
+        
+        if (burstMax > 0 && count > effectiveMax) {
+          const burstData = await effectiveStore.increment(`${key}:burst`, burstMax, burstWindowMs);
+          totalMax = effectiveMax + burstMax;
+          totalCount = effectiveMax + burstData.count;
+        }
 
         if (totalCount > totalMax) {
           await log(`Key ${key} hit limit: ${totalCount}/${totalMax}`);

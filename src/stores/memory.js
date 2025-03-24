@@ -5,11 +5,12 @@ class MemoryStore {
   
     async increment(key, max, windowMs) {
       const now = Date.now();
-      const data = this.store.get(key) || { count: 0, resetTime: now + windowMs };
-      if (now > data.resetTime) {
-        data.count = 0;
-        data.resetTime = now + windowMs;
+      let data = this.store.get(key);
+      
+      if (!data || now >= data.resetTime) {
+        data = { count: 0, resetTime: now + windowMs };
       }
+      
       data.count++;
       this.store.set(key, data);
       return { count: data.count, resetTime: data.resetTime };

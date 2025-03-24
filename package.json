@@ -5,38 +5,39 @@
     "main": "src/index.js",
     "types": "types/index.d.ts",
     "scripts": {
-      "test": "jest",
-      "lint": "eslint src/",
-      "prepublishOnly": "npm run test"
+        "test": "jest",
+        "lint": "eslint src/",
+        "prepublishOnly": "npm run test"
     },
     "keywords": [
-      "rate-limiter",
-      "nodejs",
-      "express",
-      "koa",
-      "fastify",
-      "redis",
-      "typescript",
-      "api-security",
-      "token-bucket",
-      "aws"
+        "rate-limiter",
+        "nodejs",
+        "express",
+        "koa",
+        "fastify",
+        "redis",
+        "typescript",
+        "api-security",
+        "token-bucket",
+        "aws"
     ],
     "author": "Ankit <private.ankit047@gmail.com> (https://imankit.hashnode.dev/)",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/imankii01/lightweight-api-rate-limiter.git"
+        "type": "git",
+        "url": "git+https://github.com/imankii01/lightweight-api-rate-limiter.git"
     },
     "homepage": "https://github.com/imankii01/lightweight-api-rate-limiter#readme",
     "bugs": {
-      "url": "https://github.com/imankii01/lightweight-api-rate-limiter/issues"
+        "url": "https://github.com/imankii01/lightweight-api-rate-limiter/issues"
     },
     "devDependencies": {
-      "jest": "^29.5.0",
-      "eslint": "^8.57.0"
+        "eslint": "^8.57.0",
+        "express": "^4.21.2",
+        "jest": "^29.5.0",
+        "supertest": "^7.1.0"
     },
-    "dependencies": {},
     "publishConfig": {
-      "access": "public"
+        "access": "public"
     }
-  }
+}
