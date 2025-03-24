@@ -160,7 +160,7 @@ app.use('/api', rateLimiter({ max: 200, windowMs: 900000, burstMax: 50 }));
 Hi, I'm **Ankit**, a Software Development Engineer-I at Mpal Solution Pvt. Ltd. in Bengaluru, India. With a B.Tech in Cyber Security from Lingaya's Vidyapeeth and hands-on experience in full-stack development, I specialize in building scalable, secure, and user-focused solutions. My journey includes leading Agile teams, deploying production systems on AWS, and mentoring interns—all while contributing to open-source projects like this one.
 
 - **Blog**: [imankit.hashnode.dev](https://imankit.hashnode.dev/)
-- **GitHub**: [github.com/imankii01](https://github.com/imankii01) *(replace with your GitHub)*
+- **GitHub**: [github.com/imankii01](https://github.com/imankii01) 
 - **NPM**: [npmjs.com/~private.ankit047](https://www.npmjs.com/~private.ankit047)
 
 ### Support My Work
