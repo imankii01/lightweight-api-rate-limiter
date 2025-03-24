@@ -1,17 +1,42 @@
 {
     "name": "lightweight-api-rate-limiter",
     "version": "1.0.0",
-    "description": "A robust, framework-agnostic rate limiter for Node.js",
+    "description": "A robust, framework-agnostic rate limiter for Node.js applications, built for scalability and ease of use",
     "main": "src/index.js",
     "types": "types/index.d.ts",
     "scripts": {
-      "test": "jest"
+      "test": "jest",
+      "lint": "eslint src/",
+      "prepublishOnly": "npm run test"
     },
-    "keywords": ["rate-limiter", "nodejs", "express", "koa", "fastify", "redis", "typescript"],
-    "author": "Your Name",
+    "keywords": [
+      "rate-limiter",
+      "nodejs",
+      "express",
+      "koa",
+      "fastify",
+      "redis",
+      "typescript",
+      "api-security",
+      "token-bucket",
+      "aws"
+    ],
+    "author": "Ankit <private.ankit047@gmail.com> (https://imankit.hashnode.dev/)",
     "license": "MIT",
-    "devDependencies": {
-      "jest": "^29.5.0"
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/imankii01/lightweight-api-rate-limiter.git"
     },
-    "dependencies": {}
+    "homepage": "https://github.com/imankii01/lightweight-api-rate-limiter#readme",
+    "bugs": {
+      "url": "https://github.com/imankii01/lightweight-api-rate-limiter/issues"
+    },
+    "devDependencies": {
+      "jest": "^29.5.0",
+      "eslint": "^8.57.0"
+    },
+    "dependencies": {},
+    "publishConfig": {
+      "access": "public"
+    }
   }
