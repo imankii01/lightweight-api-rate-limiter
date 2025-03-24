@@ -201,5 +201,3 @@ Found a bug or have a feature idea? Open an issue or submit a pull request on [G
 
 ## License
 [MIT License](LICENSE) - Free to use, modify, and distribute.
-
----# lightweight-api-rate-limiter
