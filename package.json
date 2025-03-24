@@ -1,0 +1,17 @@
+{
+    "name": "lightweight-api-rate-limiter",
+    "version": "1.0.0",
+    "description": "A robust, framework-agnostic rate limiter for Node.js",
+    "main": "src/index.js",
+    "types": "types/index.d.ts",
+    "scripts": {
+      "test": "jest"
+    },
+    "keywords": ["rate-limiter", "nodejs", "express", "koa", "fastify", "redis", "typescript"],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "jest": "^29.5.0"
+    },
+    "dependencies": {}
+  }
