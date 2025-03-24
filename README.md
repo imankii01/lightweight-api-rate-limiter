@@ -1,7 +1,5 @@
 # Lightweight API Rate Limiter
 
-![npm version](https://img.shields.io/npm/v/lightweight-api-rate-limiter.svg) ![npm downloads](https://img.shields.io/npm/dt/lightweight-api-rate-limiter.svg) ![license](https://img.shields.io/npm/l/lightweight-api-rate-limiter.svg)
-
 A **robust, framework-agnostic, and highly customizable rate limiter** for Node.js applications. Built by Ankit, a Software Development Engineer with expertise in React.js, Node.js, and AWS, this package is designed to protect your APIs from abuse while offering advanced features like token bucket rate limiting, pluggable storage, and real-time metrics. Whether you're using Express, Koa, Fastify, or a custom Node.js server, this package integrates seamlessly into any project.
 
 ## Why Choose This?
